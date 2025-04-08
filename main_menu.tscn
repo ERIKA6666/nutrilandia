@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3pnprhv0xv5"]
+
+[ext_resource type="Texture2D" uid="uid://bmv50m2emhcen" path="res://ui/fondos/iu 1.jpg" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://diepjwp7h5a4u" path="res://ui/titulo 2.png" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://b83ebcab4sjau" path="res://ui/buttons/Button play 1.png" id="3_glbon"]
+[ext_resource type="Texture2D" uid="uid://c21faw68bpkg0" path="res://ui/buttons/Button play 2.png" id="4_nlkkf"]
+[ext_resource type="Script" uid="uid://dn6wv3sn1g7c6" path="res://play_texture_button.gd" id="5_glbon"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -4.00001
+offset_top = 4.0
+offset_right = 12729.0
+offset_bottom = 7093.0
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("1_06t4h")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 272.0
+offset_top = -26.0
+offset_right = 2728.0
+offset_bottom = 2563.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_7vrkn")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 488.0
+offset_top = 404.0
+offset_right = 928.0
+offset_bottom = 671.0
+scale = Vector2(0.4, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="PlayTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_glbon")
+texture_pressed = ExtResource("4_nlkkf")
+stretch_mode = 3
+script = ExtResource("5_glbon")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_left = 372.0
+offset_top = 314.0
+offset_right = 650.0
+offset_bottom = 376.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Frase" type="Label" parent="MarginContainer2"]
+layout_mode = 2
+text = "Aprende a comer  jugando"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PlayTextureButton" to="MarginContainer/VBoxContainer/PlayTextureButton" method="_on_pressed"]
