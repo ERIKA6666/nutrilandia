@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dro46o8vlipxe"]
+
+[ext_resource type="Script" uid="uid://d2xdqt2hbxj6s" path="res://Escenas/Nivel1/fresa.gd" id="1_um33e"]
+[ext_resource type="Texture2D" uid="uid://bjsbgp24x50in" path="res://ui/sprites/fresa.png" id="2_5wpl6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fwqx0"]
+radius = 53.8516
+
+[node name="Fresa" type="RigidBody2D"]
+light_mask = 2
+collision_mask = 2
+script = ExtResource("1_um33e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3, 5)
+scale = Vector2(1.56897, 1.60345)
+texture = ExtResource("2_5wpl6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 10)
+shape = SubResource("CircleShape2D_fwqx0")
+debug_color = Color(0.929412, 0.32549, 0.360784, 0.968627)

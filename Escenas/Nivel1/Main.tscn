@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1xnovw3pup50"]
+
+[ext_resource type="Script" uid="uid://bsfi0m0vqdigt" path="res://Escenas/Nivel1/main.gd" id="1_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://r2ucbjute2yg" path="res://ui/fondos/ui 2/fondo 1 0f 3.jpg" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://fc2r4snbkxh5" path="res://Escenas/Nivel1/Heroe.tscn" id="2_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://babbqhmohpv70" path="res://Escenas/Nivel1/Resortera.tscn" id="3_r0du0"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_cm0pq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(589, 329)
+scale = Vector2(0.0981289, 0.0921535)
+texture = ExtResource("1_glv2v")
+
+[node name="Heroe" parent="." instance=ExtResource("2_uu6xs")]
+position = Vector2(201, 516)
+
+[node name="Resortera" parent="." instance=ExtResource("3_r0du0")]
+position = Vector2(296, 523)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(591, 322)

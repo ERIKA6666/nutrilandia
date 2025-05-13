@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://b72s3s0wsmila"]
+
+[ext_resource type="Texture2D" uid="uid://cwugwjixr136k" path="res://ui/fondos/ui 2/fondo 1 0f 1.jpg" id="1_5itv4"]
+[ext_resource type="Texture2D" uid="uid://diepjwp7h5a4u" path="res://ui/titulo 2.png" id="2_yiwdh"]
+[ext_resource type="Texture2D" uid="uid://c8ji3wt880j2" path="res://ui/fondos/Nivel1 ventana.png" id="3_m10tc"]
+[ext_resource type="Texture2D" uid="uid://bavdksjtuuas4" path="res://ui/fondos/Nivel 2 ventana.png" id="4_1pkq1"]
+[ext_resource type="Texture2D" uid="uid://b83ebcab4sjau" path="res://ui/buttons/Button play 1.png" id="5_4h1v5"]
+[ext_resource type="Texture2D" uid="uid://c21faw68bpkg0" path="res://ui/buttons/Button play 2.png" id="6_inu62"]
+[ext_resource type="Script" uid="uid://dn6wv3sn1g7c6" path="res://Escenas/Inicio/play_texture_button.gd" id="7_6c1ot"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Fondo" type="TextureRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 647.0
+texture = ExtResource("1_5itv4")
+expand_mode = 1
+
+[node name="Titulo1" type="TextureRect" parent="."]
+offset_left = 322.0
+offset_top = -210.0
+offset_right = 876.0
+offset_bottom = 423.0
+texture = ExtResource("2_yiwdh")
+expand_mode = 1
+
+[node name="Nivel 1" type="MarginContainer" parent="."]
+offset_left = 294.0
+offset_top = 174.0
+offset_right = 921.0
+offset_bottom = 1101.0
+scale = Vector2(0.4, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Nivel 1"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Nivel 1/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_m10tc")
+
+[node name="Nivel 2" type="MarginContainer" parent="."]
+offset_left = 648.0
+offset_top = 172.0
+offset_right = 908.0
+offset_bottom = 551.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Nivel 2"]
+clip_contents = true
+layout_direction = 1
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Nivel 2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_1pkq1")
+expand_mode = 5
+
+[node name="bnt nivel 1" type="MarginContainer" parent="."]
+offset_left = 376.0
+offset_top = 434.0
+offset_right = 621.0
+offset_bottom = 641.0
+scale = Vector2(0.4, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="bnt nivel 1"]
+layout_mode = 2
+
+[node name="PlayTextureButton" type="TextureButton" parent="bnt nivel 1/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_4h1v5")
+texture_pressed = ExtResource("6_inu62")
+stretch_mode = 3
+script = ExtResource("7_6c1ot")
+
+[node name="bnt nivel 2" type="MarginContainer" parent="."]
+offset_left = 730.0
+offset_top = 434.0
+offset_right = 982.0
+offset_bottom = 641.0
+scale = Vector2(0.4, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="bnt nivel 2"]
+layout_mode = 2
+
+[node name="PlayTextureButton" type="TextureButton" parent="bnt nivel 2/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_4h1v5")
+texture_pressed = ExtResource("6_inu62")
+stretch_mode = 3
+script = ExtResource("7_6c1ot")
+
+[connection signal="pressed" from="bnt nivel 1/VBoxContainer/PlayTextureButton" to="bnt nivel 1/VBoxContainer/PlayTextureButton" method="_on_pressed"]
+[connection signal="pressed" from="bnt nivel 2/VBoxContainer/PlayTextureButton" to="bnt nivel 2/VBoxContainer/PlayTextureButton" method="_on_pressed"]

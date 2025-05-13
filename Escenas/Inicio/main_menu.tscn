@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://c3pnprhv0xv5"]
 
-[ext_resource type="Texture2D" uid="uid://bmv50m2emhcen" path="res://ui/fondos/iu 1.jpg" id="1_06t4h"]
-[ext_resource type="Texture2D" uid="uid://diepjwp7h5a4u" path="res://ui/titulo 2.png" id="2_7vrkn"]
-[ext_resource type="Texture2D" uid="uid://b83ebcab4sjau" path="res://ui/buttons/Button play 1.png" id="3_glbon"]
-[ext_resource type="Texture2D" uid="uid://c21faw68bpkg0" path="res://ui/buttons/Button play 2.png" id="4_nlkkf"]
-[ext_resource type="Script" uid="uid://dn6wv3sn1g7c6" path="res://play_texture_button.gd" id="5_glbon"]
+[ext_resource type="Texture2D" uid="uid://bmv50m2emhcen" path="res://ui/fondos/iu 1.jpg" id="1_5uu1h"]
+[ext_resource type="Texture2D" uid="uid://diepjwp7h5a4u" path="res://ui/titulo 2.png" id="2_cg1j1"]
+[ext_resource type="Texture2D" uid="uid://b83ebcab4sjau" path="res://ui/buttons/Button play 1.png" id="3_nvf37"]
+[ext_resource type="Texture2D" uid="uid://c21faw68bpkg0" path="res://ui/buttons/Button play 2.png" id="4_13ak7"]
+[ext_resource type="Script" uid="uid://dn6wv3sn1g7c6" path="res://Escenas/Inicio/play_texture_button.gd" id="5_81rnl"]
 
 [node name="MainMenu" type="Node2D"]
 
@@ -14,7 +14,7 @@ offset_top = 4.0
 offset_right = 12729.0
 offset_bottom = 7093.0
 scale = Vector2(0.09, 0.09)
-texture = ExtResource("1_06t4h")
+texture = ExtResource("1_5uu1h")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 offset_left = 272.0
@@ -22,7 +22,7 @@ offset_top = -26.0
 offset_right = 2728.0
 offset_bottom = 2563.0
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_7vrkn")
+texture = ExtResource("2_cg1j1")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_left = 488.0
@@ -36,10 +36,10 @@ layout_mode = 2
 
 [node name="PlayTextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("3_glbon")
-texture_pressed = ExtResource("4_nlkkf")
+texture_normal = ExtResource("3_nvf37")
+texture_pressed = ExtResource("4_13ak7")
 stretch_mode = 3
-script = ExtResource("5_glbon")
+script = ExtResource("5_81rnl")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 offset_left = 372.0

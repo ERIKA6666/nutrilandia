@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsire0fanborx"]
+
+[ext_resource type="Texture2D" uid="uid://c7xam5jgp7tyd" path="res://ui/sprites/pizza.png" id="1_1bg7y"]
+[ext_resource type="Script" uid="uid://4i4r8p5dg5b" path="res://Escenas/Nivel1/hamburguesa.gd" id="1_x3snl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3snl"]
+size = Vector2(353, 340)
+
+[node name="Hamburguesa" type="CharacterBody2D" groups=["comida_chatarra"]]
+position = Vector2(960, 455)
+collision_layer = 2
+script = ExtResource("1_x3snl")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(67, 50)
+scale = Vector2(1.12105, 0.995261)
+texture = ExtResource("1_1bg7y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["comida_chatarra"]]
+position = Vector2(66.5, 10)
+shape = SubResource("RectangleShape2D_x3snl")

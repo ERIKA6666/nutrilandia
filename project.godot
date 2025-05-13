@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="Nutrilandia"
-run/main_scene="uid://sdx7x4183ksp"
+run/main_scene="uid://b1xnovw3pup50"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+
+[global_group]
+
+comida_chatarra=""
 
 [rendering]
 
