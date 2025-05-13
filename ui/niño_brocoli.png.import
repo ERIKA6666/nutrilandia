@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uqu1olhx83x5"
-path="res://.godot/imported/niña brocoli.png-42d492a5a86975f76a751719ef4fb2f9.ctex"
+uid="uid://coaoso82d8cqg"
+path="res://.godot/imported/niño_brocoli.png-784807bfd87c89472db9c470d53d5a5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/niña brocoli.png"
-dest_files=["res://.godot/imported/niña brocoli.png-42d492a5a86975f76a751719ef4fb2f9.ctex"]
+source_file="res://ui/niño_brocoli.png"
+dest_files=["res://.godot/imported/niño_brocoli.png-784807bfd87c89472db9c470d53d5a5b.ctex"]
 
 [params]
 

@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Nutrilandia"
-run/main_scene="uid://b1xnovw3pup50"
+run/main_scene="uid://c3pnprhv0xv5"
 config/features=PackedStringArray("4.4", "Mobile")
+
+[autoload]
+
+Global="*res://global.gd"
 
 [global_group]
 

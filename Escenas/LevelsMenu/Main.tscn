@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b72s3s0wsmila"]
+[gd_scene load_steps=9 format=3 uid="uid://b72s3s0wsmila"]
 
 [ext_resource type="Texture2D" uid="uid://cwugwjixr136k" path="res://ui/fondos/ui 2/fondo 1 0f 1.jpg" id="1_5itv4"]
 [ext_resource type="Texture2D" uid="uid://diepjwp7h5a4u" path="res://ui/titulo 2.png" id="2_yiwdh"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b83ebcab4sjau" path="res://ui/buttons/Button play 1.png" id="5_4h1v5"]
 [ext_resource type="Texture2D" uid="uid://c21faw68bpkg0" path="res://ui/buttons/Button play 2.png" id="6_inu62"]
 [ext_resource type="Script" uid="uid://dn6wv3sn1g7c6" path="res://Escenas/Inicio/play_texture_button.gd" id="7_6c1ot"]
+[ext_resource type="Script" uid="uid://dunuf3m7gls3k" path="res://Escenas/LevelsMenu/play_texture_button.gd" id="7_inu62"]
 
 [node name="Main" type="Node2D"]
 
@@ -69,7 +70,7 @@ layout_mode = 2
 texture_normal = ExtResource("5_4h1v5")
 texture_pressed = ExtResource("6_inu62")
 stretch_mode = 3
-script = ExtResource("7_6c1ot")
+script = ExtResource("7_inu62")
 
 [node name="bnt nivel 2" type="MarginContainer" parent="."]
 offset_left = 730.0
