@@ -8,7 +8,6 @@ size = Vector2(353, 340)
 
 [node name="Hamburguesa" type="CharacterBody2D" groups=["comida_chatarra"]]
 position = Vector2(960, 455)
-collision_layer = 2
 script = ExtResource("1_x3snl")
 metadata/_edit_group_ = true
 
@@ -17,6 +16,6 @@ position = Vector2(67, 50)
 scale = Vector2(1.12105, 0.995261)
 texture = ExtResource("1_1bg7y")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["comida_chatarra"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["barrera", "comida_chatarra"]]
 position = Vector2(66.5, 10)
 shape = SubResource("RectangleShape2D_x3snl")

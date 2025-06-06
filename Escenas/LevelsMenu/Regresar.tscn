@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqmkavv5tbks5"]
+
+[ext_resource type="Texture2D" uid="uid://v3r6mmc8gfv5" path="res://ui/ventanas/Ventana regreso/vR1.png" id="1_m1184"]
+[ext_resource type="Script" uid="uid://dakgu60gcogcq" path="res://Escenas/LevelsMenu/regresar.gd" id="1_xhjvc"]
+[ext_resource type="Texture2D" uid="uid://cfuaas63rbd7p" path="res://ui/ventanas/Ventana regreso/vR2.png" id="2_xhjvc"]
+[ext_resource type="Texture2D" uid="uid://bk5y17h4rcvst" path="res://ui/ventanas/Ventana regreso/vR2H.png" id="3_ecs3o"]
+[ext_resource type="Texture2D" uid="uid://b7v4vasdxv7l2" path="res://ui/ventanas/Ventana regreso/vR3.png" id="4_dgx3y"]
+[ext_resource type="Texture2D" uid="uid://blfbvmncvg4kx" path="res://ui/ventanas/Ventana regreso/vR3H.png" id="5_gs68x"]
+
+[node name="Regresar" type="Popup"]
+transparent_bg = true
+initial_position = 2
+size = Vector2i(776, 415)
+visible = true
+script = ExtResource("1_xhjvc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_left = 211.0
+offset_top = 50.0
+offset_right = 577.0
+offset_bottom = 171.0
+texture = ExtResource("1_m1184")
+
+[node name="ButtonNo" type="TextureButton" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_left = 211.0
+offset_top = 172.0
+offset_right = 399.0
+offset_bottom = 293.0
+texture_normal = ExtResource("2_xhjvc")
+texture_pressed = ExtResource("3_ecs3o")
+texture_hover = ExtResource("3_ecs3o")
+stretch_mode = 0
+
+[node name="ButtonYes" type="TextureButton" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_left = 394.0
+offset_top = 172.0
+offset_right = 577.0
+offset_bottom = 293.0
+texture_normal = ExtResource("4_dgx3y")
+texture_pressed = ExtResource("5_gs68x")
+texture_hover = ExtResource("5_gs68x")
+stretch_mode = 0
+
+[connection signal="pressed" from="ButtonNo" to="." method="_on_button_no_pressed"]
+[connection signal="pressed" from="ButtonYes" to="." method="_on_button_yes_pressed"]

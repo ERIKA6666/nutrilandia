@@ -1,9 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://fc2r4snbkxh5"]
+[gd_scene load_steps=4 format=3 uid="uid://fc2r4snbkxh5"]
 
 [ext_resource type="Script" uid="uid://hily6jx36uao" path="res://Escenas/Nivel1/heroe.gd" id="1_e180b"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6vnp2"]
-load_path = "res://.godot/imported/niña_brocoli.png-2beb20b52b847b10adeba0017b3f64be.ctex"
 
 [sub_resource type="GDScript" id="GDScript_rbsn0"]
 script/source = "extends Sprite2D
@@ -18,7 +15,6 @@ script = ExtResource("1_e180b")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-3.89062, -2.84374)
 scale = Vector2(0.58551, 0.555298)
-texture = SubResource("CompressedTexture2D_6vnp2")
 script = SubResource("GDScript_rbsn0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -16,3 +16,7 @@ func spawnear_hamburguesa():
 func _on_hamburguesa_destruida():
 	hamburguesa_actual = null
 	spawnear_hamburguesa()  # Vuelve a generar otra cuando se destruye (opcional)
+
+
+func _on_stop_button_pressed() -> void:
+	pass # Replace with function body.

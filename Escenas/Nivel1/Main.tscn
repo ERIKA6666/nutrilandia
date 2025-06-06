@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1xnovw3pup50"]
+[gd_scene load_steps=9 format=3 uid="uid://b1xnovw3pup50"]
 
 [ext_resource type="Script" uid="uid://bsfi0m0vqdigt" path="res://Escenas/Nivel1/main.gd" id="1_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://r2ucbjute2yg" path="res://ui/fondos/ui 2/fondo 1 0f 3.jpg" id="1_glv2v"]
 [ext_resource type="PackedScene" uid="uid://fc2r4snbkxh5" path="res://Escenas/Nivel1/Heroe.tscn" id="2_uu6xs"]
 [ext_resource type="PackedScene" uid="uid://babbqhmohpv70" path="res://Escenas/Nivel1/Resortera.tscn" id="3_r0du0"]
+[ext_resource type="Texture2D" uid="uid://cem7w7of2xucf" path="res://ui/buttons/pausa.png" id="5_pi7rc"]
+[ext_resource type="Texture2D" uid="uid://nrdxey03jq4e" path="res://ui/buttons/pause 2.png" id="6_s66ap"]
+[ext_resource type="Script" uid="uid://ejxwpofrdgga" path="res://Escenas/Nivel1/stop_button.gd" id="7_s66ap"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6qrh"]
+size = Vector2(1172, 117)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cm0pq")
@@ -21,3 +27,21 @@ position = Vector2(296, 523)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(591, 322)
+
+[node name="Margenes de Collision" type="Area2D" parent="."]
+position = Vector2(547, 708)
+
+[node name="Piso" type="CollisionShape2D" parent="Margenes de Collision"]
+position = Vector2(39, 3.5)
+shape = SubResource("RectangleShape2D_q6qrh")
+
+[node name="stopButton" type="TextureButton" parent="."]
+offset_left = 1033.0
+offset_top = 20.0
+offset_right = 1137.0
+offset_bottom = 127.0
+texture_normal = ExtResource("5_pi7rc")
+texture_pressed = ExtResource("6_s66ap")
+script = ExtResource("7_s66ap")
+
+[connection signal="pressed" from="stopButton" to="." method="_on_stop_button_pressed"]

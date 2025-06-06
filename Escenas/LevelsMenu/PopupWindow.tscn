@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cuu5qehl8qykg"]
+
+[ext_resource type="Script" uid="uid://5aspfa4odjs6" path="res://Escenas/LevelsMenu/popup_window.gd" id="1_8nu57"]
+[ext_resource type="Texture2D" uid="uid://v3r6mmc8gfv5" path="res://ui/ventanas/Ventana regreso/vR1.png" id="1_nx2xt"]
+[ext_resource type="Texture2D" uid="uid://cfuaas63rbd7p" path="res://ui/ventanas/Ventana regreso/vR2.png" id="2_1jyia"]
+[ext_resource type="Texture2D" uid="uid://bk5y17h4rcvst" path="res://ui/ventanas/Ventana regreso/vR2H.png" id="3_rjb25"]
+[ext_resource type="Texture2D" uid="uid://b7v4vasdxv7l2" path="res://ui/ventanas/Ventana regreso/vR3.png" id="4_rjb25"]
+[ext_resource type="Texture2D" uid="uid://blfbvmncvg4kx" path="res://ui/ventanas/Ventana regreso/vR3H.png" id="5_8nu57"]
+
+[node name="PopupWindow" type="CanvasLayer"]
+layer = 0
+script = ExtResource("1_8nu57")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 0
+offset_left = 410.0
+offset_top = 172.0
+offset_right = 776.0
+offset_bottom = 293.0
+texture = ExtResource("1_nx2xt")
+
+[node name="ButtonNo" type="TextureButton" parent="."]
+light_mask = 0
+offset_left = 410.0
+offset_top = 294.0
+offset_right = 599.0
+offset_bottom = 418.0
+texture_normal = ExtResource("2_1jyia")
+texture_pressed = ExtResource("3_rjb25")
+texture_hover = ExtResource("3_rjb25")
+stretch_mode = 0
+
+[node name="ButtonYes" type="TextureButton" parent="."]
+light_mask = 0
+offset_left = 593.0
+offset_top = 294.0
+offset_right = 776.0
+offset_bottom = 418.0
+texture_normal = ExtResource("4_rjb25")
+texture_pressed = ExtResource("5_8nu57")
+texture_hover = ExtResource("5_8nu57")
+stretch_mode = 0

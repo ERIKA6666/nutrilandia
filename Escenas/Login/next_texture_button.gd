@@ -1,3 +1,3 @@
 extends TextureButton
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://Escenas//LevelsMenu//Main.tscn")
+	get_tree().change_scene_to_file("res://Escenas/Cargando/Cargando.tscn")

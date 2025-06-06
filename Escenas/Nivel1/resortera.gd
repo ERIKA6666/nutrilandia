@@ -1,7 +1,7 @@
 extends Node2D
 
 var arrastrando = false
-var fuerza = 900
+var fuerza = 700
 var fresa_scene = preload("res://Escenas//Nivel1//Fresa.tscn")
 
 func _input(event):
