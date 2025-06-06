@@ -3,7 +3,7 @@ extends Node2D
 # Tiempo de espera en segundos (ajusta según necesites)
 var tiempo_espera := 1.0
 # Ruta corregida de la escena siguiente (observa la extensión .tscn)
-var escena_siguiente := "res://Escenas/LevelsMenu/Main.tscn"
+var escena_siguiente := "res://Escenas/Historia/Bienvenida.tscn"
 
 func _ready():
 	# Validar que la escena existe antes de intentar cargarla
