@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqq40sunv66ir"]
+
+[ext_resource type="Script" uid="uid://bgf5nokjs64jj" path="res://Escenas/Nivel1/modalInicio.gd" id="1_5wn5l"]
+[ext_resource type="Texture2D" uid="uid://mf1035krxoc1" path="res://ui/fondos/Group 38.png" id="2_tqe0v"]
+[ext_resource type="Texture2D" uid="uid://b32hua3iwdyom" path="res://ui/buttons/Arrow1.png" id="3_elyfr"]
+[ext_resource type="Texture2D" uid="uid://y073tv12gnse" path="res://ui/buttons/arrow2.png" id="4_irbx8"]
+
+[node name="ModalInicio" type="CanvasLayer"]
+script = ExtResource("1_5wn5l")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 438.0
+offset_top = 145.0
+offset_right = 700.0
+offset_bottom = 487.0
+texture = ExtResource("2_tqe0v")
+expand_mode = 1
+
+[node name="BotonComenzar" type="TextureButton" parent="."]
+offset_left = 532.0
+offset_top = 393.0
+offset_right = 602.0
+offset_bottom = 445.0
+texture_normal = ExtResource("3_elyfr")
+texture_pressed = ExtResource("4_irbx8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="BotonComenzar" to="." method="_on_button_pressed"]

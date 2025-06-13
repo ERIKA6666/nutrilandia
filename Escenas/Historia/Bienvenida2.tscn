@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cwugwjixr136k" path="res://ui/fondos/ui 2/fondo 1 0f 1.jpg" id="1_ojiwx"]
 [ext_resource type="Script" uid="uid://cnv20dddq2leb" path="res://Escenas/Historia/bienvenida_2.gd" id="1_qao8s"]
 [ext_resource type="Texture2D" uid="uid://diepjwp7h5a4u" path="res://ui/titulo 2.png" id="2_gbisk"]
-[ext_resource type="Texture2D" uid="uid://dymxtdoaodacr" path="res://ui/fondos/Group 34.png" id="3_gbisk"]
+[ext_resource type="Texture2D" uid="uid://dgicih76nk7k4" path="res://ui/fondos/ventana inicio.png" id="4_qao8s"]
 [ext_resource type="Texture2D" uid="uid://b32hua3iwdyom" path="res://ui/buttons/Arrow1.png" id="5_lysrw"]
 [ext_resource type="Texture2D" uid="uid://y073tv12gnse" path="res://ui/buttons/arrow2.png" id="6_xvq3k"]
 
@@ -29,7 +29,7 @@ offset_left = 261.0
 offset_top = 116.0
 offset_right = 860.0
 offset_bottom = 504.0
-texture = ExtResource("3_gbisk")
+texture = ExtResource("4_qao8s")
 expand_mode = 1
 
 [node name="nextButton" type="TextureButton" parent="."]
