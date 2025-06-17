@@ -2,22 +2,29 @@ extends CanvasLayer
 
 signal modal_closed
 
-@onready var start_button: TextureButton = $BotonComenzar
+@export var boton_comenzar: TextureButton
 
-func open():
-	show()
-	get_tree().paused = true
-	
-	# Conexión segura con verificación
-	if start_button.is_connected("pressed", _on_button_pressed):
-		start_button.disconnect("pressed", _on_button_pressed)
-	
-	start_button.connect("pressed", _on_button_pressed, CONNECT_DEFERRED | CONNECT_PERSIST)
-	print("Botón conectado:", start_button.is_connected("pressed", _on_button_pressed)) # Debug
+func _ready():
+	if boton_comenzar:
+		# Debug de propiedades críticas del botón
+		print("Propiedades del botón:")
+		print(" - Disabled:", boton_comenzar.disabled)
+		print(" - Visible:", boton_comenzar.visible)
+		print(" - Mouse Filter:", boton_comenzar.mouse_filter)
+		print(" - Global Position:", boton_comenzar.global_position)
+		print(" - Size:", boton_comenzar.size)
+		
+		# Conexión alternativa directa
+		boton_comenzar.pressed.connect(_on_button_pressed, CONNECT_PERSIST)
+		
+		# Forzar focus (opcional pero recomendado)
+		boton_comenzar.grab_focus()
 
 func _on_button_pressed():
-	print("Señal de botón recibida EN EL MODAL") # Debug crucial
+	print("¡SEÑAL DE BOTÓN RECIBIDA!")  # Debug en mayúsculas para destacar
+	get_viewport().set_input_as_handled()  # Asegurar que el input se procesa
 	hide()
 	get_tree().paused = false
-	emit_signal("modal_closed")
-	queue_free() # Eliminar el modal después de usarlo
+	modal_closed.emit()
+	queue_free()
+	

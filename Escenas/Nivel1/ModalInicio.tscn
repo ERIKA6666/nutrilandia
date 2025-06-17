@@ -5,8 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://b32hua3iwdyom" path="res://ui/buttons/Arrow1.png" id="3_elyfr"]
 [ext_resource type="Texture2D" uid="uid://y073tv12gnse" path="res://ui/buttons/arrow2.png" id="4_irbx8"]
 
-[node name="ModalInicio" type="CanvasLayer"]
+[node name="ModalInicio" type="CanvasLayer" node_paths=PackedStringArray("boton_comenzar")]
 script = ExtResource("1_5wn5l")
+boton_comenzar = NodePath("BotonComenzar")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 438.0

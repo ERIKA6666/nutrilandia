@@ -4,19 +4,17 @@ var hamburguesa_actual = null
 var hamburguesa_scene = preload("res://Escenas/Nivel1/Hamburguesa.tscn")
 var juego_iniciado = false
 
-
-
 func _ready():
 	print("Inicializando juego...")
-	# Carga asíncrona para evitar problemas
+	
 	var modal = preload("res://Escenas/Nivel1/ModalInicio.tscn").instantiate()
-	# Asegurar que se añade al árbol antes de conectar señales
 	add_child(modal)
-	await get_tree().process_frame  # Reemplazo correcto para yield
-	# Conexión con banderas especiales
-	modal.connect("modal_closed", _on_modal_closed, CONNECT_DEFERRED | CONNECT_PERSIST)
-	modal.open()
-	print("Modal listo en árbol:", modal.is_inside_tree()) # Debug
+	
+	# Verificación visual temporal (debug)
+	modal.modal_closed.connect(_on_modal_closed, CONNECT_DEFERRED)
+	# Asegurar posición z-index
+	modal.layer = 100
+	print("Z-index del modal:", modal.layer)
 
 func _on_modal_closed():
 	print("Señal modal_closed recibida en Main")

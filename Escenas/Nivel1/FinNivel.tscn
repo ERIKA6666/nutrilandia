@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkbff2yosjy7f"]
+
+[ext_resource type="Texture2D" uid="uid://c62ibpi1ndytw" path="res://ui/fondos/Group 41.png" id="1_ivi2b"]
+[ext_resource type="Texture2D" uid="uid://c4gm2m0mst5o6" path="res://ui/buttons/Rotate.png" id="2_xwdig"]
+[ext_resource type="Texture2D" uid="uid://cp6fnjw3dbhcs" path="res://ui/buttons/Rotate 2.png" id="3_ltu33"]
+[ext_resource type="Texture2D" uid="uid://ljhsix8qa76" path="res://ui/buttons/Home.png" id="4_ltu33"]
+[ext_resource type="Texture2D" uid="uid://dsrouwbsxf11k" path="res://ui/buttons/Home 2.png" id="5_nys3b"]
+
+[node name="FinNivel" type="CanvasLayer"]
+
+[node name="fondo" type="TextureRect" parent="."]
+offset_left = 394.0
+offset_top = 106.0
+offset_right = 692.0
+offset_bottom = 531.0
+texture = ExtResource("1_ivi2b")
+expand_mode = 1
+
+[node name="replayButton" type="TextureButton" parent="."]
+offset_left = 457.0
+offset_top = 441.0
+offset_right = 515.0
+offset_bottom = 504.0
+texture_normal = ExtResource("2_xwdig")
+texture_pressed = ExtResource("3_ltu33")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="homeButton" type="TextureButton" parent="."]
+offset_left = 561.0
+offset_top = 444.0
+offset_right = 630.0
+offset_bottom = 500.0
+texture_normal = ExtResource("4_ltu33")
+texture_pressed = ExtResource("5_nys3b")
+ignore_texture_size = true
+stretch_mode = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b1xnovw3pup50"]
+[gd_scene load_steps=9 format=3 uid="uid://b1xnovw3pup50"]
 
 [ext_resource type="Script" uid="uid://bsfi0m0vqdigt" path="res://Escenas/Nivel1/main.gd" id="1_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://r2ucbjute2yg" path="res://ui/fondos/ui 2/fondo 1 0f 3.jpg" id="1_glv2v"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cem7w7of2xucf" path="res://ui/buttons/pausa.png" id="5_pi7rc"]
 [ext_resource type="Texture2D" uid="uid://nrdxey03jq4e" path="res://ui/buttons/pause 2.png" id="6_s66ap"]
 [ext_resource type="Script" uid="uid://ejxwpofrdgga" path="res://Escenas/Nivel1/stop_button.gd" id="7_s66ap"]
-[ext_resource type="PackedScene" uid="uid://cqq40sunv66ir" path="res://Escenas/Nivel1/ModalInicio.tscn" id="8_bs3ec"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6qrh"]
 size = Vector2(1172, 117)
@@ -44,7 +43,5 @@ offset_bottom = 127.0
 texture_normal = ExtResource("5_pi7rc")
 texture_pressed = ExtResource("6_s66ap")
 script = ExtResource("7_s66ap")
-
-[node name="ModalInicio" parent="." instance=ExtResource("8_bs3ec")]
 
 [connection signal="pressed" from="stopButton" to="." method="_on_stop_button_pressed"]
