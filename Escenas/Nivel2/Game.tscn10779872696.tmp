@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://ceqx32qpmte8a"]
+
+[ext_resource type="Script" uid="uid://djnwgmb8pc2ff" path="res://Escenas/Nivel2/game.gd" id="1_isx7k"]
+[ext_resource type="Texture2D" uid="uid://cwugwjixr136k" path="res://ui/fondos/ui 2/fondo 1 0f 1.jpg" id="1_w5qg6"]
+[ext_resource type="PackedScene" uid="uid://b4ff6mqk2ljvj" path="res://Escenas/Nivel2/player.tscn" id="2_pbwsc"]
+[ext_resource type="PackedScene" uid="uid://vir3i6uklbit" path="res://Escenas/Nivel2/spawner.tscn" id="3_pbwsc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isx7k"]
+size = Vector2(1164, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5qg6"]
+size = Vector2(17, 676)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbwsc"]
+size = Vector2(42.25, 669.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vimnj"]
+size = Vector2(1160, 33.25)
+
+[node name="Game" type="Node"]
+script = ExtResource("1_isx7k")
+
+[node name="Fondo10f1" type="Sprite2D" parent="."]
+position = Vector2(575.75, 325)
+scale = Vector2(0.0977479, 0.0921535)
+texture = ExtResource("1_w5qg6")
+
+[node name="Player" parent="." instance=ExtResource("2_pbwsc")]
+position = Vector2(423, 527)
+
+[node name="CajaDeColision" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CajaDeColision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaDeColision/StaticBody2D"]
+position = Vector2(572, 0)
+shape = SubResource("RectangleShape2D_isx7k")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="CajaDeColision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaDeColision/StaticBody2D2"]
+position = Vector2(-1.5, 328)
+shape = SubResource("RectangleShape2D_w5qg6")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="CajaDeColision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaDeColision/StaticBody2D3"]
+position = Vector2(1162.88, 328)
+shape = SubResource("RectangleShape2D_pbwsc")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="CajaDeColision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaDeColision/StaticBody2D4"]
+position = Vector2(580, 650.625)
+shape = SubResource("RectangleShape2D_vimnj")
+
+[node name="Spawner" parent="." instance=ExtResource("3_pbwsc")]
+position = Vector2(87, 116)
+
+[node name="Spawner2" parent="." instance=ExtResource("3_pbwsc")]
+position = Vector2(331, 121)
+
+[node name="Spawner3" parent="." instance=ExtResource("3_pbwsc")]
+position = Vector2(525, 111)
+
+[node name="Spawner4" parent="." instance=ExtResource("3_pbwsc")]
+position = Vector2(719, 144)
+
+[node name="Spawner5" parent="." instance=ExtResource("3_pbwsc")]
+position = Vector2(980, 172)
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 540.0
+offset_top = 37.0
+offset_right = 580.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(1, 1, 0.117647, 1)
+theme_override_font_sizes/font_size = 80
+text = "0"

@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4ff6mqk2ljvj"]
+
+[ext_resource type="Script" uid="uid://buwqvki3g30vo" path="res://Escenas/Nivel2/player.gd" id="1_dxqpm"]
+[ext_resource type="Texture2D" uid="uid://bwnadkeac2y4b" path="res://ui/niña_brocoli.png" id="1_x3oap"]
+[ext_resource type="AudioStream" uid="uid://d15d5bet03151" path="res://Escenas/Nivel2/[Super Mario Bros] Coin Sound Effect [Free Ringtone Download] - Youtube Sound Effects.mp3" id="3_ukgoj"]
+[ext_resource type="AudioStream" uid="uid://drg33yj1lgmqt" path="res://Escenas/Nivel2/efecto de sonido de explosión - Sound Effects & Music.mp3" id="4_p8oti"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3oap"]
+size = Vector2(148, 174)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxqpm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x3oap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_x3oap")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x3oap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_x3oap")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x3oap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_x3oap")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_dxqpm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, 4)
+shape = SubResource("RectangleShape2D_x3oap")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+position = Vector2(2, 2)
+scale = Vector2(0.512597, 0.346757)
+sprite_frames = SubResource("SpriteFrames_dxqpm")
+animation = &"hurt"
+
+[node name="SubirSonido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ukgoj")
+volume_db = 2.971
+
+[node name="morirSonido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_p8oti")
+volume_db = -14.857

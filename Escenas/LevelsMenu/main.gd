@@ -1,10 +1,18 @@
 extends Node2D
 
 var ventana_escena = preload("res://Escenas/LevelsMenu/Regresar.tscn")
+# 1. AÑADE ESTA LÍNEA - Ruta a tu nivel 2
+const NIVEL2_PATH = "res://Escenas/Nivel2/Game.tscn"
 
+func _ready():
+	# 2. AÑADE ESTE BLOQUE - Hacer "nivel 2" clickeable
+	if has_node("nivel 2"):
+		$"nivel 2".mouse_filter = Control.MOUSE_FILTER_PASS
+		$"nivel 2".gui_input.connect(_on_nivel2_gui_input)
+		$"nivel 2".mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 
 func _on_play_level_1_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Escenas//ChoseCaracter//Main.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://Escenas//ChoseCaracter//Main.tscn")
 
 func _on_return_button_pressed() -> void:
 	# Crear overlay de fondo usando CanvasLayer para mejor control
@@ -39,5 +47,12 @@ func _on_ventana_closed(overlay_layer: CanvasLayer, window_layer: CanvasLayer) -
 	overlay_layer.queue_free()
 	window_layer.queue_free()
 
+# 3. MODIFICA ESTA FUNCIÓN - Completar función existente
 func _on_menu_button_pressed() -> void:
-	pass # Replace with function body.
+	# Navegar al menú principal
+	get_tree().change_scene_to_file("res://Escenas/LewebMenu/main.tscn")
+
+# AÑADE ESTA FUNCIÓN - Manejar clics en "nivel 2"
+func _on_nivel2_gui_input(event):
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		get_tree().change_scene_to_file(NIVEL2_PATH)

@@ -19,6 +19,10 @@ config/features=PackedStringArray("4.4", "Mobile")
 Global="*res://global.gd"
 EventBus="*res://Event_bus.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [global_group]
 
 comida_chatarra=""

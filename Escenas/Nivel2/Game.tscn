@@ -1,0 +1,167 @@
+[gd_scene load_steps=15 format=3 uid="uid://ceqx32qpmte8a"]
+
+[ext_resource type="Script" uid="uid://djnwgmb8pc2ff" path="res://Escenas/Nivel2/game.gd" id="1_isx7k"]
+[ext_resource type="Texture2D" uid="uid://cwugwjixr136k" path="res://ui/fondos/ui 2/fondo 1 0f 1.jpg" id="1_w5qg6"]
+[ext_resource type="PackedScene" uid="uid://b4ff6mqk2ljvj" path="res://Escenas/Nivel2/player.tscn" id="2_pbwsc"]
+[ext_resource type="PackedScene" uid="uid://vir3i6uklbit" path="res://Escenas/Nivel2/spawner.tscn" id="3_pbwsc"]
+[ext_resource type="Script" uid="uid://d01v5gnv3k4fe" path="res://Escenas/Nivel2/death_screen.gd" id="5_vimnj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isx7k"]
+size = Vector2(1164, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5qg6"]
+size = Vector2(17, 676)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbwsc"]
+size = Vector2(42.25, 669.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vimnj"]
+size = Vector2(1160, 33.25)
+
+[sub_resource type="FontFile" id="FontFile_isx7k"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_vimnj"]
+font = SubResource("FontFile_isx7k")
+font_size = 50
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="FontFile" id="FontFile_565h4"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_2y5q3"]
+font = SubResource("FontFile_565h4")
+font_size = 50
+font_color = Color(1, 1, 0.0784314, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gkqyw"]
+font_size = 60
+font_color = Color(1, 1, 0.0352941, 1)
+
+[node name="Game" type="Node"]
+script = ExtResource("1_isx7k")
+
+[node name="Fondo10f1" type="Sprite2D" parent="."]
+position = Vector2(575.75, 325)
+scale = Vector2(0.0977479, 0.0921535)
+texture = ExtResource("1_w5qg6")
+
+[node name="Player" parent="." instance=ExtResource("2_pbwsc")]
+position = Vector2(423, 527)
+
+[node name="CajaDeColision" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CajaDeColision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaDeColision/StaticBody2D"]
+position = Vector2(572, 0)
+shape = SubResource("RectangleShape2D_isx7k")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="CajaDeColision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaDeColision/StaticBody2D2"]
+position = Vector2(-1.5, 328)
+shape = SubResource("RectangleShape2D_w5qg6")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="CajaDeColision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaDeColision/StaticBody2D3"]
+position = Vector2(1162.88, 328)
+shape = SubResource("RectangleShape2D_pbwsc")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="CajaDeColision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaDeColision/StaticBody2D4"]
+position = Vector2(580, 650.625)
+shape = SubResource("RectangleShape2D_vimnj")
+
+[node name="Spawner" parent="." instance=ExtResource("3_pbwsc")]
+position = Vector2(87, 116)
+
+[node name="Spawner2" parent="." instance=ExtResource("3_pbwsc")]
+position = Vector2(403, 146)
+
+[node name="Spawner4" parent="." instance=ExtResource("3_pbwsc")]
+position = Vector2(745, 161)
+
+[node name="Spawner5" parent="." instance=ExtResource("3_pbwsc")]
+position = Vector2(1067, 180)
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 540.0
+offset_top = 37.0
+offset_right = 580.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(1, 1, 0.117647, 1)
+theme_override_font_sizes/font_size = 80
+text = "0"
+
+[node name="DeathScreen" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("5_vimnj")
+
+[node name="MsgLabel" type="Label" parent="DeathScreen"]
+offset_left = 473.0
+offset_top = 134.0
+offset_right = 649.0
+offset_bottom = 201.0
+text = "Perdiste"
+label_settings = SubResource("LabelSettings_vimnj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DeathScreen"]
+offset_left = 479.606
+offset_top = 194.35
+offset_right = 650.606
+offset_bottom = 277.35
+
+[node name="Label" type="Label" parent="DeathScreen/HBoxContainer"]
+layout_mode = 2
+text = "Score:"
+label_settings = SubResource("LabelSettings_2y5q3")
+
+[node name="FinalScore" type="Label" parent="DeathScreen/HBoxContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_gkqyw")
+
+[node name="ReinicioButton" type="Button" parent="DeathScreen"]
+offset_left = 322.0
+offset_top = 267.0
+offset_right = 409.0
+offset_bottom = 317.0
+theme_override_font_sizes/font_size = 30
+text = "Reiniciar"
+
+[node name="SalirButton2" type="Button" parent="DeathScreen"]
+offset_left = 689.0
+offset_top = 267.0
+offset_right = 761.0
+offset_bottom = 317.0
+theme_override_font_sizes/font_size = 30
+text = "Salir"
+
+[connection signal="pressed" from="DeathScreen/ReinicioButton" to="DeathScreen" method="_on_reinicio_button_pressed"]
+[connection signal="pressed" from="DeathScreen/SalirButton2" to="DeathScreen" method="_on_salir_button_2_pressed"]

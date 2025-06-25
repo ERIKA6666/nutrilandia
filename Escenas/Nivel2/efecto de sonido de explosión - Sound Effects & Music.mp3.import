@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drg33yj1lgmqt"
+path="res://.godot/imported/efecto de sonido de explosión - Sound Effects & Music.mp3-10b2bc5c806bf825d64d9a5872cb0ed6.mp3str"
+
+[deps]
+
+source_file="res://Escenas/Nivel2/efecto de sonido de explosión - Sound Effects & Music.mp3"
+dest_files=["res://.godot/imported/efecto de sonido de explosión - Sound Effects & Music.mp3-10b2bc5c806bf825d64d9a5872cb0ed6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

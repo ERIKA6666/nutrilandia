@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfh6p0a708ffv"]
+
+[ext_resource type="Script" uid="uid://bli1wxy6p6ul1" path="res://colleccionable.gd" id="1_u1gca"]
+[ext_resource type="Texture2D" uid="uid://bw2whcl278niu" path="res://ui/frutas/a_realistic_apple__ce7b3360.png" id="2_opu3y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecucj"]
+size = Vector2(133.5, 127.5)
+
+[node name="Colleccionable" type="Area2D"]
+script = ExtResource("1_u1gca")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-3.99997, 2)
+scale = Vector2(0.246094, 0.257813)
+texture = ExtResource("2_opu3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 9.25)
+shape = SubResource("RectangleShape2D_ecucj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
