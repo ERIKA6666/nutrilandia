@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://co83wtbco6o5q"]
+
+[ext_resource type="Texture2D" uid="uid://cwugwjixr136k" path="res://ui/fondos/ui 2/fondo 1 0f 1.jpg" id="1_ojiwx"]
+[ext_resource type="Script" uid="uid://cnv20dddq2leb" path="res://Escenas/Historia/bienvenida_2.gd" id="1_qao8s"]
+[ext_resource type="Texture2D" uid="uid://diepjwp7h5a4u" path="res://ui/titulo 2.png" id="2_gbisk"]
+[ext_resource type="Texture2D" uid="uid://dgicih76nk7k4" path="res://ui/fondos/ventana inicio.png" id="4_qao8s"]
+[ext_resource type="Texture2D" uid="uid://b32hua3iwdyom" path="res://ui/buttons/Arrow1.png" id="5_lysrw"]
+[ext_resource type="Texture2D" uid="uid://y073tv12gnse" path="res://ui/buttons/arrow2.png" id="6_xvq3k"]
+
+[node name="Bienvenida2" type="Node2D"]
+script = ExtResource("1_qao8s")
+
+[node name="fondo" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 646.0
+texture = ExtResource("1_ojiwx")
+expand_mode = 1
+
+[node name="Titulo1" type="TextureRect" parent="."]
+offset_left = 322.0
+offset_top = -210.0
+offset_right = 876.0
+offset_bottom = 417.0
+texture = ExtResource("2_gbisk")
+expand_mode = 1
+
+[node name="ventana" type="TextureRect" parent="."]
+offset_left = 261.0
+offset_top = 116.0
+offset_right = 860.0
+offset_bottom = 504.0
+texture = ExtResource("4_qao8s")
+expand_mode = 1
+
+[node name="nextButton" type="TextureButton" parent="."]
+offset_left = 546.0
+offset_top = 380.0
+offset_right = 645.0
+offset_bottom = 466.0
+texture_normal = ExtResource("5_lysrw")
+texture_pressed = ExtResource("6_xvq3k")
+
+[connection signal="pressed" from="nextButton" to="." method="_on_next_button_pressed"]

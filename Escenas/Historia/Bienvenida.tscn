@@ -1,12 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://bggc2my28y7d7"]
+[gd_scene load_steps=5 format=3 uid="uid://bggc2my28y7d7"]
 
-[ext_resource type="Texture2D" uid="uid://cjm3dkgrapqow" path="res://ui/fondos/cd.png" id="1_rp366"]
+[ext_resource type="Texture2D" uid="uid://cukfxkqjot8jo" path="res://ui/fondos/cd3.png" id="1_8lo8a"]
+[ext_resource type="Script" uid="uid://xt37ursclceh" path="res://Escenas/Historia/bienvenida.gd" id="1_yhhyg"]
+[ext_resource type="Texture2D" uid="uid://b32hua3iwdyom" path="res://ui/buttons/Arrow1.png" id="3_3a5bc"]
+[ext_resource type="Texture2D" uid="uid://y073tv12gnse" path="res://ui/buttons/arrow2.png" id="4_8r6rb"]
 
 [node name="Bienvenida" type="Node2D"]
+script = ExtResource("1_yhhyg")
 
 [node name="Fondo" type="TextureRect" parent="."]
-offset_top = -4.0
-offset_right = 1150.0
-offset_bottom = 718.0
-texture = ExtResource("1_rp366")
+offset_left = -25.0
+offset_top = -31.0
+offset_right = 1228.0
+offset_bottom = 857.0
+texture = ExtResource("1_8lo8a")
 expand_mode = 1
+
+[node name="nextButton" type="TextureButton" parent="."]
+offset_left = 842.0
+offset_top = 136.0
+offset_right = 941.0
+offset_bottom = 222.0
+texture_normal = ExtResource("3_3a5bc")
+texture_pressed = ExtResource("4_8r6rb")
+stretch_mode = 0
+
+[connection signal="pressed" from="nextButton" to="." method="_on_next_button_pressed"]
